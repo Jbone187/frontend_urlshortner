@@ -20,6 +20,8 @@
    color: white;
    text-align: center;
 }
+
+
   
   </style>
   <body>
@@ -41,39 +43,46 @@
         <div class="container">
           <h1 class="display-4">Url Shortner</h1>
           <p class="lead">Please add url to box, when button is pressed this page will redirect to another page with json data being displayed with your new URL included</p>
+        
         </div>
      
 
 
+        <div class="row">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4">
+                    <div class="input-group">
+                        <input type="text" id="url" class="form-control" placeholder="Add Url"/> 
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary" id="btn" type="button">Create</button>
+                        </span>
+                    </div><!-- /input-group -->
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4"></div>
+            </div><!-- /.row -->
 
 
 
 
 
-
-
-<div class="input-group mb-3">
-    
-      <div class="input-group mb-3">
-        <input type="text" id="url" name="url" class="form-control" placeholder="Add URL" aria-label="Add URL" aria-describedby="basic-addon2">
-        <div class="input-group-append">
-          <button class="btn btn-primary" id="btn" type="button">Button</button>
-        </div>
-      </div>
-      
-      </div>
  </div>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+</br>
+</br>
+</br>
  <h3>An example </h3>
  <p>Turn this URL:</p>
 <p>https://www.amazon.com/Kindle-Wireless-Reading-Display-Globally/dp/B003FSUDM4/ref=amb_link_353259562_2?pf_rd_m=ATVPDKIK 
 X0DER&pf_rd_s=center-10&pf_rd_r=11EYKTN682A79T370AM3&pf_rd_t=201&pf_rd_p=1270985982&pf_rd_i=B002Y27P3M</p>
- <p>into this URL:</p> 
- <p>http://test.jma.cloud:3000/oipow</p>  
+ <p>Into this URL:</p> 
+ <p>http://test.jma.cloud:3000/oipow</p> 
+</br>
+</br>
+</br>
+</br>
+</br>
+<h6><center>Please veriy Url is in correct format for button to work.</center></h6>
+<p><center>http://yoururl.com</center></p>
 
  <div class="footer">
         <p><font color="black">JMASOLUTIONS © 2018 - All rights reserved</font></p>
@@ -103,12 +112,11 @@ fetch("http://localhost:3000",{
             'Content-Type': 'application/json'
         }
                
-        }).then( (response) => { 
-       
-           window.location.href = 'http://localhost:3000/data.json';
-         
-        });
+        }).then(function (response) {
         
+            window.location.href = 'http://localhost:3000/data.json';
+	})
+       
 };
 
 
