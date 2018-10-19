@@ -22,6 +22,13 @@
 }
 
 
+.box {
+    display: flex;
+    flex-wrap: wrap; /* Optional. only if you want the items to wrap */
+    justify-content: center; /* For horizontal alignment */
+    align-items: center; /* For vertical alignment */
+}
+
   
   </style>
   <body>
@@ -78,6 +85,20 @@ X0DER&pf_rd_s=center-10&pf_rd_r=11EYKTN682A79T370AM3&pf_rd_t=201&pf_rd_p=1270985
  <p>http://test.jma.cloud:3000/oipow</p> 
 </br>
 </br>
+
+<div class="box">
+
+  <h3 id="json"><center></center></h3>
+
+</div>
+
+
+
+
+
+
+
+
 </br>
 </br>
 </br>
@@ -114,7 +135,18 @@ fetch("http://localhost:3000",{
                
         }).then(function (response) {
         
-            window.location.href = 'http://localhost:3000/data.json';
+            //window.location.href = 'http://localhost:3000/data.json';
+
+            fetch('http://localhost:3000/data.json').then(function(response) { 
+              
+	// Convert to JSON
+	return response.json();
+}).then(function(json) {
+
+    document.getElementById("json").innerHTML = json;
+
+
+});
 	})
        
 };
