@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <title>Url Shortner</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
-  </head>
+</head>
 
 
-  
-  <style>
-.footer {
+
+<style>
+    .footer {
    position: fixed;
    left: 0;
    bottom: 0;
@@ -22,136 +24,120 @@
 }
 
 
-.box {
+.json {
     display: flex;
-    flex-wrap: wrap; /* Optional. only if you want the items to wrap */
-    justify-content: center; /* For horizontal alignment */
-    align-items: center; /* For vertical alignment */
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center; 
 }
 
   
   </style>
-  <body>
-<!--
-        <form>
-            URL:<br>
-            <input  type="text" id="url" name="url">
-            <br>
-            <input type="submit" id="btn" value="Submit">
-          </form> 
-          </body>
-          <br>
--->
 
-          
+<body>
 
-
-<div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid">
         <div class="container">
-          <h1 class="display-4">Url Shortner</h1>
-          <p class="lead">Please add url to box, when button is pressed this page will redirect to another page with json data being displayed with your new URL included</p>
-        
+            <h1 class="display-4">Url Shortner</h1>
+            <p class="lead">Please add url to box, when button is pressed this page will redirect to another page with
+                json data being displayed with your new URL included</p>
+
         </div>
-     
+
 
 
         <div class="row">
-                <div class="col-lg-4"></div>
-                <div class="col-lg-4">
-                    <div class="input-group">
-                        <input type="text" id="url" class="form-control" placeholder="Add Url"/> 
-                        <span class="input-group-btn">
-                            <button class="btn btn-primary" id="btn" type="button">Create</button>
-                        </span>
-                    </div><!-- /input-group -->
-                </div><!-- /.col-lg-4 -->
-                <div class="col-lg-4"></div>
-            </div><!-- /.row -->
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4">
+                <div class="input-group">
+                    <input type="text" id="url" class="form-control" placeholder="Add Url" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" id="btn" type="button">Create</button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-lg-4"></div>
+        </div>
 
 
 
 
 
- </div>
+    </div>
 
-</br>
-</br>
-</br>
- <h3>An example </h3>
- <p>Turn this URL:</p>
-<p>https://www.amazon.com/Kindle-Wireless-Reading-Display-Globally/dp/B003FSUDM4/ref=amb_link_353259562_2?pf_rd_m=ATVPDKIK 
-X0DER&pf_rd_s=center-10&pf_rd_r=11EYKTN682A79T370AM3&pf_rd_t=201&pf_rd_p=1270985982&pf_rd_i=B002Y27P3M</p>
- <p>Into this URL:</p> 
- <p>http://test.jma.cloud:3000/oipow</p> 
-</br>
-</br>
+    </br>
+    </br>
+    </br>
+    <h3>An example </h3>
+    <p>Turn this URL:</p>
+    <p>https://www.amazon.com/Kindle-Wireless-Reading-Display-Globally/dp/B003FSUDM4/ref=amb_link_353259562_2?pf_rd_m=ATVPDKIK
+        X0DER&pf_rd_s=center-10&pf_rd_r=11EYKTN682A79T370AM3&pf_rd_t=201&pf_rd_p=1270985982&pf_rd_i=B002Y27P3M</p>
+    <p>Into this URL:</p>
+    <p>http://test.jma.cloud:3000/oipow</p>
+    </br>
+    </br>
 
-<div class="box">
+    <div class="json">
 
-  <h3 id="json"><center></center></h3>
+        <h3 id="json">
+            <center></center>
+        </h3>
 
-</div>
-
-
-
-
+    </div>
 
 
+    </br>
+    </br>
+    </br>
+    <h6>
+        <center>Please veriy Url is in correct format for button to work.</center>
+    </h6>
+    <p>
+        <center>http://yoururl.com</center>
+    </p>
+
+    <div class="footer">
+        <p>
+            <font color="black">JMASOLUTIONS © 2018 - All rights reserved</font>
+        </p>
+    </div>
+
+    <script>
+
+        document.getElementById("btn").addEventListener("click", run);
+
+        function run() {
+
+            let data = document.getElementById("url").value
+
+            //alert(data);
+
+            fetch("http://localhost:3000", {
+                method: "POST",
+                body: JSON.stringify({ url: data }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+
+            }).then(function (response) {
 
 
-</br>
-</br>
-</br>
-<h6><center>Please veriy Url is in correct format for button to work.</center></h6>
-<p><center>http://yoururl.com</center></p>
+                fetch('http://localhost:3000/data.json').then(function (response) {
 
- <div class="footer">
-        <p><font color="black">JMASOLUTIONS © 2018 - All rights reserved</font></p>
-      </div>
+                    // Convert to JSON
+                    return response.json();
+                }).then(function (json) {
 
-  <script>
-
-       
-        
-
-document.getElementById("btn").addEventListener("click", run);
+                    document.getElementById("json").innerHTML = json;
 
 
+                });
+            })
 
-
-
-function run(){
-
-let data = document.getElementById("url").value
-
-//alert(data);
-
-fetch("http://localhost:3000",{
-        method: "POST",
-        body: JSON.stringify({url: data}),
-        headers: {
-            'Content-Type': 'application/json'
-        }
-               
-        }).then(function (response) {
-        
-            //window.location.href = 'http://localhost:3000/data.json';
-
-            fetch('http://localhost:3000/data.json').then(function(response) { 
-              
-	// Convert to JSON
-	return response.json();
-}).then(function(json) {
-
-    document.getElementById("json").innerHTML = json;
-
-
-});
-	})
-       
-};
+        };
 
 
     </script>
-  </body>
+</body>
+
 </html>
