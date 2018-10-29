@@ -14,7 +14,7 @@ function run() {
       return response.json();
     })
     .then(function(data) {
-      //alert(JSON.stringify(response));
+      
       document.getElementById("json").innerHTML = JSON.stringify(data);
     });
 }
