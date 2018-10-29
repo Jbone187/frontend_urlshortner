@@ -13,8 +13,8 @@ function run() {
     .then(function(response) {
       return response.json();
     })
-    .then(function(response) {
+    .then(function(data) {
       //alert(JSON.stringify(response));
-      document.getElementById("json").innerHTML = JSON.stringify(response);
+      document.getElementById("json").innerHTML = JSON.stringify(data);
     });
 }
