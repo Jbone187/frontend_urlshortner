@@ -1,5 +1,7 @@
 document.getElementById("btn").addEventListener("click", run);
 
+// I suggest you use a more meaningful name instead of run. Try to be descriptive.
+// What will this function do? Call it that.
 function run() {
   let data = document.getElementById("url").value;
 
@@ -14,7 +16,7 @@ function run() {
       return response.json();
     })
     .then(function(data) {
-      
+      // remove space here.
       document.getElementById("json").innerHTML = JSON.stringify(data);
     });
 }
