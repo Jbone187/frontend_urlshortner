@@ -7,10 +7,11 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
         integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    
-    <link rel="stylesheet" href="/css/main.css"/>
+
+    <link rel="stylesheet" href="/css/main.css" />
 
 </head>
+
 
 
 <body>
@@ -18,13 +19,7 @@
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-4">URL Shortner</h1>
-            <!--
-                Some suggestions:
-                - Be consistent with how you spell url (either url or URL)
-                - Use proper grammer. The first comma might be better a period.
-                - Use 'a' and 'the' i.e. add 'a' url... when 'the' button is pressed.
-            -->
-            <p class="lead">Please add url to box, when button is pressed this page will redirect to another page with
+            <p class="lead">Please add URL to box, when button is pressed this page will redirect to another page with
                 json data being displayed with your new URL included</p>
 
         </div>
@@ -35,7 +30,6 @@
             <div class="col-lg-4"></div>
             <div class="col-lg-4">
                 <div class="input-group">
-                    <!-- Same as before: be consistent with url spelling -->
                     <input type="text" id="url" class="form-control" placeholder="Add URL" />
                     <span class="input-group-btn">
                         <button class="btn btn-primary" id="btn" type="button">Create</button>
@@ -54,38 +48,42 @@
     <p>https://www.amazon.com/Kindle-Wireless-Reading-Display-Globally/dp/B003FSUDM4/ref=amb_link_353259562_2?pf_rd_m=ATVPDKIK
         X0DER&pf_rd_s=center-10&pf_rd_r=11EYKTN682A79T370AM3&pf_rd_t=201&pf_rd_p=1270985982&pf_rd_i=B002Y27P3M</p>
     <p>Into this URL:</p>
-    <!-- This needs to be updated because you're not using :3000 on the url anymore -->
     <p>http://test.jma.cloud/oipow</p>
+
     </br>
     </br>
 
-
-    <div class="center">
+    <div class="center1">
 
         <h3 id="json"></h3>
 
     </div>
 
+    </br>
+    </br>
 
-    </br>
-    </br>
-    </br>
-    <h6>
-        <!-- Same as above. -->
-        <center>Please veriy Url is in correct format for button to work.</center>
-    </h6>
-    <p>
-        <center>http://yoururl.com</center>
-    </p>
+    <div class="center2">
+        <h6>
+            Please veriy URL is in correct format for button to work.
+        </h6>
+    </div>
+
+    <div class="center3">
+        <p>
+            http://yoururl.com
+        </p>
+
+    </div>
+
+
+
 
     <div class="footer">
         <p>
-            <!-- Instead of using a <font> tag, use CSS to style your text. -->
-            <font color="black">JMASOLUTIONS © 2018 - All rights reserved</font>
+            JMASOLUTIONS © 2018 - All rights reserved
         </p>
     </div>
-    <!-- Suggestion: call your js file 'main.js' instead of 'data.js'. -->
-    <!-- I say that because main is used more often and makes more sense semantically. -->
+
     <script src="js/main.js"></script>
 
 </body>
