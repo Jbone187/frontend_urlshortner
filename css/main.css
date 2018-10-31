@@ -1,20 +1,35 @@
- .footer {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: rgba(219, 219, 219, 0.719);
-   color: white;
-   text-align: center;
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(219, 219, 219, 0.719);
+  color: white;
+  text-align: center;
 }
-/*
-    It might be better to change the name of this to something for descriptive.
-    This blog post might be helpful: http://bdavidxyz.com/blog/how-to-name-css-classes/
-    You want other developers to be able to see your CSS and know what it is used for.
-*/
-.center {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+
+.center1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
+
+.center2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.center3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  color: black;
+}
+
