@@ -8,6 +8,13 @@
   text-align: center;
 }
 
+/*
+  What's the purpose of using a CSS class? Read here: https://www.w3schools.com/html/html_classes.asp
+
+  Keeping that in mind, how can we refactor .center1, .center2, .center3? How can we make our code more D.R.Y.?
+
+  https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
+*/
 .center1 {
   display: flex;
   flex-wrap: wrap;
