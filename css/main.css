@@ -13,6 +13,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 
 .center2 {
@@ -20,6 +21,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 
 .center3 {
@@ -27,9 +29,33 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
+}
+
+.center4 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.center5 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.center6 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
 p {
   color: black;
 }
-
