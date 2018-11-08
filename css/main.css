@@ -15,47 +15,7 @@
 
   https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
 */
-.center1 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-}
-
-.center2 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-}
-
-.center3 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-}
-
-.center4 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-}
-
-.center5 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-}
-
-.center6 {
+.center {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
