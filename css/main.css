@@ -15,28 +15,14 @@
 
   https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
 */
-.center1 {
+.center {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-}
-
-.center2 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.center3 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  margin: 0 auto;
 }
 
 p {
   color: black;
 }
-
